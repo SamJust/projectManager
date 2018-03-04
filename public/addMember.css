@@ -1,0 +1,40 @@
+#projectOptions{
+  /* display: flex;
+  justify-content: space-around;
+  padding-top: 5px; */
+  text-align: center;
+  padding: 10px;
+}
+
+.projectOptionsButtons:hover{
+  background: darkblue;
+  color: white;
+}
+
+.projectOptionsButtons{
+  color:darkblue;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  border: solid 2px darkblue;
+}
+
+#input{
+  flex-direction: column;
+  display: flex;
+}
+
+#worker{
+  width: 150px;
+}
+
+#role{
+  width: 50px;
+}
+#submitButton{
+  width: 155px;
+}
+
+#errorMessage{
+  color: red;
+}

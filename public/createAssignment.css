@@ -1,0 +1,28 @@
+#worker, #submitButton{
+  position: absolute;
+}
+
+#submitButton{
+  margin-top: 20px;
+}
+
+#projectOptions{
+  /* display: flex;
+  justify-content: space-around;
+  padding-top: 5px; */
+  text-align: center;
+  padding: 10px;
+}
+
+.projectOptionsButtons:hover{
+  background: darkblue;
+  color: white;
+}
+
+.projectOptionsButtons{
+  color:darkblue;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  border: solid 2px darkblue;
+}

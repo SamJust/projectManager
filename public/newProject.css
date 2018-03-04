@@ -1,0 +1,16 @@
+#input{
+  flex-direction: column;
+  display: flex;
+}
+
+#projectName{
+  width: 150px;
+}
+
+#submitButton{
+  width: 155px;
+}
+
+#errorMessage{
+  color: red;
+}

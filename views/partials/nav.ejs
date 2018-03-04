@@ -1,0 +1,26 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/public/jQuery/slide.js"></script>
+<script src="/public/jQuery/onClick.js"></script>
+<div id="navigation">
+  <nav>
+    <p id="scroll"><span>=</span></p>
+
+    <ul id="navbar">
+      <li><a class="link" href="/"><p class="menuItem">Home<p></a></li>
+      <%if(user.username == undefined){%>
+        <li><a class="link" href="/registration"><p class="menuItem">Registration<p></a></li>
+        <li><a class="link" href="/login"><p class="menuItem">Log in<p></a></li>
+      <%} else { for(let i = 0; i < user.projectsArray.length; i++){%>
+        <li><a class="link" href="/project/<%=user.projectsArray[i].id%>"><p class="menuItem"><%=user.projectsArray[i].name%></p></a></li><%}%>
+      <%}%>
+    </ul>
+    <%if(user.username != undefined){%>
+      <img id="profile" src="/public/profile.png" alt="profile">
+      <div id="profileDropdown">
+        <a class="profileLink" href="/profile">Profile</a>
+        <br>
+        <a class="profileLink" href="/logof">Log off</a>
+      </div>
+    <%}%>
+  </nav>
+</div>

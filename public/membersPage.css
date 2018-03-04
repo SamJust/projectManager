@@ -1,0 +1,76 @@
+h1{
+  text-align: center;
+  font-size: 35px;
+}
+
+h2{
+  text-align: right;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+/*.projectEtry:hover .memberContent{
+  display: block;
+}*/
+
+.memberContent{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.projectMember{
+  display: flex;
+  justify-content: space-between;
+}
+
+.memberButtonEdit, .memberButtonDelete, .memberButtonCancel{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.memberList{
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+.memberButtons{
+  padding-right: 20px;
+}
+
+.memberText{
+  padding-left: 10px;
+}
+
+.memberWorker{
+}
+
+.memberInfo{
+  display: flex;
+}
+
+#projectOptions{
+  /* display: flex;
+  justify-content: space-around;
+  padding-top: 5px; */
+  text-align: center;
+  padding: 10px;
+}
+
+.projectOptionsButtons:hover{
+  background: darkblue;
+  color: white;
+}
+
+.projectOptionsButtons{
+  color:darkblue;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  border: solid 2px darkblue;
+}

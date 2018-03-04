@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/public/navigation.css">
+  <link rel="stylesheet" type="text/css" href="/public/createAssignment.css">
+  <script src="/public/jQuery/createAssignment.js"></script>
+</head>
+<body>
+  <%- include('partials/nav.ejs', {user:userInfo}) %>
+  <main id="<%=projectId%>">
+    <textarea id="assignment"></textarea>
+    <select id="worker"><% workers.forEach((item, i, arr)=>{%><option><%=item.name%></option> <%}); %> </select>
+    <input type="button" name="submit" value="Create assignment" id="submitButton">
+    <div id="projectOptions">
+      <a class="projectOptionsButtons" href="/project/<%=projectId%>">Back to project</a>
+      <a class="projectOptionsButtons" href="/project/<%=projectId%>/members">Manage members</a>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/public/navigation.css">
+  <link rel="stylesheet" type="text/css" href="/public/newProject.css">
+  <script src="/public/jQuery/addProject.js"></script>
+</head>
+<body>
+  <%- include('partials/nav.ejs', {user:userInfo}) %>
+  <main>
+    <div id='input'>
+    <p>New project name</p>
+    <input type='text' id="projectName">
+    <input type="button" name="submit" value="Create project" id="submitButton">
+  </div>
+  </main>
+</body>
+</html>

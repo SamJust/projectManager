@@ -1,0 +1,75 @@
+h1{
+  text-align: center;
+  font-size: 35px;
+}
+
+h2{
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+/*.projectEtry:hover .entryContent{
+  display: block;
+}*/
+
+.entryContent{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.projectEtry{
+  display: flex;
+  justify-content: space-between;
+}
+
+.entryButtonEdit, .entryButtonDelete, .entryButtonCancel{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.entryList{
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+.entryButtons{
+  padding-right: 20px;
+}
+
+.entryText{
+  padding-left: 10px;
+}
+
+.entryWorker{
+}
+
+.entryInfo{
+  display: flex;
+}
+
+#projectOptions{
+  /* display: flex;
+  justify-content: space-around;
+  padding-top: 5px; */
+  text-align: center;
+  padding: 10px;
+}
+
+.projectOptionsButtons:hover{
+  background: darkblue;
+  color: white;
+}
+
+.projectOptionsButtons{
+  color:darkblue;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  border: solid 2px darkblue;
+}

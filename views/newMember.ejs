@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/public/navigation.css">
+  <link rel="stylesheet" type="text/css" href="/public/addMember.css">
+  <script src="/public/jQuery/addMember.js"></script>
+</head>
+<body>
+  <%- include('partials/nav.ejs', {user:userInfo}) %>
+  <main id="<%=projectId%>">
+    <div id='input'>
+    <p>Worker site login</p>
+    <input type='text' id="worker">
+    <p>Role</p>
+    <select id="role">
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+    </select>
+    <input type="button" name="submit" value="Add worker" id="submitButton">
+  </div>
+    <div id="projectOptions">
+      <a class="projectOptionsButtons" href="/project/<%=projectId%>">Back to project</a>
+      <a class="projectOptionsButtons" href="/project/<%=projectId%>/members">Manage members</a>
+    </div>
+  </main>
+</body>
+</html>

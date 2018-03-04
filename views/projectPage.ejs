@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/public/navigation.css">
+  <link rel="stylesheet" type="text/css" href="/public/projectPage.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/public/jQuery/projectEdit.js"></script>
+</head>
+<body>
+  <div>
+    <%- include('partials/nav.ejs', {user:userInfo}) %>
+  </div>
+  <main>
+    <h1><%=projectName%></h1>
+    <h2>Project creator</h2>
+    <ul class="entryList" id='<%=projectId%>'>
+      <% if(tasks){ for(let i = 0; i < tasks.length; i++){ %>
+      <li class="projectEtry" id="<%=i%>">
+        <div class="entryInfo">
+            <p class="entryText"><%=tasks[i].assignment%></p>::<p class="entryWorker"><%=tasks[i].worker%></p>
+        </div>
+        <% if(role > 0) {%>
+        <div class="entryButtons">
+          <img class="entryButtonEdit" src="/public/edit.png" alt="entryButton">
+          <img class="entryButtonDelete" src="/public/trash.png" alt="entryButton">
+        </div>
+        <%}%>
+      </li>
+      <hr>
+      <%}} else { %>
+        <p>No assignments here yet. Create some!</p>
+      <%}%>
+    </ul>
+
+    <div id="projectOptions">
+      <% if(role > 0) {%>
+      <a class="projectOptionsButtons" href="<%=projectId%>/newentry">Add an assignment</a><%}%>
+      <% if(role > 1) {%>
+      <a class="projectOptionsButtons" href="<%=projectId%>/members">Manage members</a><%}%>
+    </div>
+  </main>
+</body>
+</html>

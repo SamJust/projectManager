@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/public/navigation.css">
+  <link rel="stylesheet" type="text/css" href="/public/registration.css">
+</head>
+<body>
+  <div>
+    <%- include('partials/nav.ejs', {user:userInfo}) %>
+  </div>
+  <main>
+    <form id="loginForm" action="/login" method="post">
+      Login:<br>
+      <input type="text" name="username"><br>
+      Pass:<br>
+      <input type="password" name="password"><br>
+      <input type="submit">
+    </form>
+  </main>
+</body>
+</html>

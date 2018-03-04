@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/public/navigation.css">
+  <link rel="stylesheet" type="text/css" href="/public/registration.css">
+</head>
+<body>
+  <div>
+    <%- include('partials/nav.ejs', {user:userInfo}) %>
+  </div>
+  <main>
+    <form id="registrationForm" action="/registration" method="post">
+      Login:<br>
+      <% if(errors.username == 'nameEmpty'){%>
+        <p class="errors">Login Field Should not be empty</p>
+      <%}%>
+      <% if(errors.username == 'loginExists'){%>
+        <p class="errors">Such login already exists</p>
+      <%}%>
+      <input type="text" name="username"><br>
+      Email:<br>
+      <% if(errors.email == 'notEmail'){%>
+        <p class="errors">Email is invalid</p>
+      <%}%>
+      <% if(errors.email == 'emailTaken'){%>
+        <p class="errors">Email is taken</p>
+      <%}%>
+      <input type="text" name="email"><br>
+      Pass:<br>
+      <% if(errors.password == 'passwordEmpty'){%>
+        <p class="errors">Pass is empty</p>
+      <%}%>
+      <input type="password" name="password"><br>
+      Repeat pass:<br>
+      <% if(errors.password == 'passwordDontMatch'){%>
+        <p class="errors">Passes don't match</p>
+      <%}%>
+      <input type="password" name="passwordRepeat"><br>
+      <input type="submit">
+    </form>
+  </main>
+</body>
+</html>

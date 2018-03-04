@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/public/navigation.css">
+  <link rel="stylesheet" type="text/css" href="/public/membersPage.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/public/jQuery/membersEdit.js"></script>
+</head>
+<body>
+  <div>
+    <%- include('partials/nav.ejs', {user:userInfo}) %>
+  </div>
+  <main>
+    <h1><%=projectName%></h1>
+    <h2>Project creator</h2>
+    <ul class="memberList" id='<%=projectId%>'>
+      <% if(members){ for(let i = 0; i < members.length; i++){ %>
+      <li class="projectMember" id="<%=i%>">
+        <div class="memberInfo">
+            <p class="memberText"><%=members[i].name%></p>::<p class="memberWorker"><%=members[i].role%></p>
+        </div>
+        <div class="memberButtons">
+          <img class="memberButtonEdit" src="/public/edit.png" alt="memberButton">
+          <img class="memberButtonDelete" src="/public/trash.png" alt="memberButton">
+        </div>
+      </li>
+      <hr>
+      <%}} else { %>
+        <p>No assignments here yet. Create some!</p>
+      <%}%>
+    </ul>
+    <div id="projectOptions">
+      <a class="projectOptionsButtons" href="/project/<%=projectId%>/newmember">Add member</a>
+      <a class="projectOptionsButtons" href="/project/<%=projectId%>">Back to project</a>
+    </div>
+  </main>
+</body>
+</html>
