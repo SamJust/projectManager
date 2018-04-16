@@ -31,7 +31,7 @@ module.exports = (app) =>{
         res.render('notAllowed.ejs', {userInfo:req.session});
       }
       else {
-        res.render('newentry.ejs',{userInfo:req.session, projectId: req.params.projectId, workers:data.users});
+        res.render('newEntry.ejs',{userInfo:req.session, projectId: req.params.projectId, workers:data.users});
       }
     });
   });

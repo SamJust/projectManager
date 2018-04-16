@@ -3,7 +3,7 @@ var cookieParser = require('cookie-parser');
 var mongoose = require('mongoose');
 var validator = require('express-validator');
 
-mongoose.connect('mongodb://localhost:27017/todoApp');
+mongoose.connect('mongodb://admin:admin@ds261078.mlab.com:61078/sam-test-fac');
 
 var mongooseSchemas = require('./mongooseSchemas.js')
 var registrationController = require('./controllers/registrationController.js');
